@@ -39,20 +39,24 @@ pipeline {
                     <html>
                     <body>
                         <h2 style="color: red;">Jenkins Pipeline Failed</h2>
+
                         <p>Here is the pipeline report:</p>
 
-                        <table border="1" cellpadding="8"
-                               style="border-collapse: collapse; width: 100%;">
+                        <table style="border-collapse: collapse; width: 100%;"
+                               border="1" cellpadding="8">
+
                             <tr style="background-color: #333333; color: white;">
                                 <th>Job</th>
                                 <th>State</th>
                                 <th>Cost</th>
                             </tr>
+
                             <tr>
                                 <td>${env.JOB_NAME}</td>
                                 <td style="color: red;">${currentBuild.currentResult}</td>
-                                <td>$0.00</td>
+                                <td>\$0.00</td>
                             </tr>
+
                         </table>
 
                         <p>
