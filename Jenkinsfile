@@ -30,6 +30,9 @@ pipeline {
 
         failure {
             echo 'Pipeline failed!'
+             mail to: 'ahmed.ishanab2@gmail.com',
+                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+                 body: "Something went wrong! Check the logs here: ${env.BUILD_URL}"
         }
 
         aborted {
